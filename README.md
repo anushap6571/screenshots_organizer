@@ -6,13 +6,23 @@ The following program is meant to run everytime a screenshot is taken. Then, it 
 
 # make sure pip is installed
 
+```
 $ brew install pip
+```
 
 # get a virtual environment
 
+```
 $ python3 -m venv /path/to/project/name_of_env
 $ source /path/to/project/name_of_env/bin/activate
+```
 
-# for imports
+# for Pillow import
 
+```
 $ pip install Pillow
+```
+
+# inside code
+
+replace the sss_direcrory_path and desktop_directory_path with your specific paths
