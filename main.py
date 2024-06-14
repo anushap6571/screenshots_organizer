@@ -1,7 +1,7 @@
 import os
 import shutil
 from pathlib import Path
-#from PIL import Image
+from PIL import Image
 
 # store the screenshot directory path name
 # can be any foldername you want 
@@ -28,12 +28,10 @@ def is_screenshot(file):
 # move it to the Screenshots folder
 for file in os.listdir():
     if(is_screenshot(file)):
-        print(file)
-        #image = Image.open(file)
-        #image.show()
+        image = Image.open(file)
+        image.show()
         new_name = input("Rename the Screenshot: ")
         new_name += ".png"
         os.rename(file, new_name)
         shutil.move(new_name, ss_directory_path)
-        #image.close()
-    
+     
