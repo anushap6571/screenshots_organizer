@@ -32,6 +32,9 @@ for file in os.listdir():
         image.show()
         new_name = input("Rename the Screenshot: ")
         new_name += ".png"
+        if new_name == "delete.png":
+            os.remove(file)
+            continue
         os.rename(file, new_name)
         shutil.move(new_name, ss_directory_path)
      
